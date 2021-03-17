@@ -16,14 +16,14 @@ import Start from "../screens/Start";
 import Products from "../screens/Products";
 
 function useUndo(reducer) {
-  const { state: _state, history: _history } = readFromLocalStorage();
+  const { state: _state, history: _history } = readFromSessionStorage();
 
   const [state, dispatch] = useReducer(reducer, _state);
   const [history, setHistory] = useState(_history);
 
   useEffect(() => {
-    localStorage.setItem("STATE", JSON.stringify(state));
-    localStorage.setItem("HISTORY", JSON.stringify(history));
+    sessionStorage.setItem("STATE", JSON.stringify(state));
+    sessionStorage.setItem("HISTORY", JSON.stringify(history));
   }, [state, history]);
 
   function _dispatch(action) {
@@ -38,7 +38,7 @@ function useUndo(reducer) {
   }
 
   function clear() {
-    localStorage.clear();
+    sessionStorage.clear();
     dispatch({
       type: Actions.RESET,
     });
@@ -69,9 +69,9 @@ function useUndo(reducer) {
   };
 }
 
-function readFromLocalStorage() {
-  const state = localStorage.getItem("STATE");
-  const history = localStorage.getItem("HISTORY");
+function readFromSessionStorage() {
+  const state = sessionStorage.getItem("STATE");
+  const history = sessionStorage.getItem("HISTORY");
 
   if (state && history) {
     return { state: JSON.parse(state), history: JSON.parse(history) };
@@ -149,19 +149,18 @@ function Funnel() {
     <div className={style.container}>
       <ProgressBar value={state.progress + "%"} />
       {buildScreens()}
-      {state.currentScreen !== Screens.CAR_SELECT ||
-        (!state.sent && (
-          <nav className={style.prev} onClick={undo}>
-            <button className={style.button}>
-              <img
-                src="images/left-chevron.svg"
-                alt="backIcon"
-                className={style.icon}
-              />
-              <span className={style.text}>back</span>
-            </button>
-          </nav>
-        ))}
+      {![Screens.CAR_SELECT, Screens.START].includes(state.currentScreen) && (
+        <nav className={style.prev} onClick={undo}>
+          <button className={style.button}>
+            <img
+              src="images/left-chevron.svg"
+              alt="backIcon"
+              className={style.icon}
+            />
+            <span className={style.text}>back</span>
+          </button>
+        </nav>
+      )}
       {/* <pre>{JSON.stringify(state, null, 20)}</pre> */}
     </div>
   );
