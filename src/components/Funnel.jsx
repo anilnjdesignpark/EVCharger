@@ -150,7 +150,7 @@ function Funnel() {
       <ProgressBar value={state.progress + "%"} />
       {buildScreens()}
       {state.currentScreen !== Screens.CAR_SELECT ||
-        (!state.done && (
+        (!state.sent && (
           <nav className={style.prev} onClick={undo}>
             <button className={style.button}>
               <img
