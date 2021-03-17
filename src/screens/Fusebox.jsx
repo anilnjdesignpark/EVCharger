@@ -6,7 +6,7 @@ import common from "./Common.module.css";
 function Fusebox({ state, dispatch }) {
   const options = [
     {
-      text: "upto 11 metres",
+      text: "upto 10",
       icon: "upto-10m.png",
       handler: function () {
         dispatch([
@@ -14,26 +14,26 @@ function Fusebox({ state, dispatch }) {
             type: Actions.SET_OPTIONS,
             payload: {
               screenName: Screens.FUSEBOX,
-              value: "upto 11"
-            }
+              value: "upto 11",
+            },
           },
           {
             type: Actions.CHANGE_SCREEN,
             payload: {
-              nextScreen: Screens.POSTCODE
-            }
+              nextScreen: Screens.POSTCODE,
+            },
           },
           {
             type: Actions.SET_PROGRESS,
             payload: {
-              progress: 60
-            }
-          }
+              progress: 60,
+            },
+          },
         ]);
-      }
+      },
     },
     {
-      text: "11 to 15 metres",
+      text: "upto 10-11",
       icon: "11-15m.png",
       handler: function () {
         dispatch([
@@ -41,26 +41,26 @@ function Fusebox({ state, dispatch }) {
             type: Actions.SET_OPTIONS,
             payload: {
               screenName: Screens.FUSEBOX,
-              value: "11 to 15 metres"
-            }
+              value: "11 to 15 metres",
+            },
           },
           {
             type: Actions.CHANGE_SCREEN,
             payload: {
-              nextScreen: Screens.POSTCODE
-            }
+              nextScreen: Screens.POSTCODE,
+            },
           },
           {
             type: Actions.SET_PROGRESS,
             payload: {
-              progress: 60
-            }
-          }
+              progress: 60,
+            },
+          },
         ]);
-      }
+      },
     },
     {
-      text: "16 to 25 metres",
+      text: "upto 16-25",
       icon: "16-25m.png",
       handler: function () {
         dispatch([
@@ -68,24 +68,24 @@ function Fusebox({ state, dispatch }) {
             type: Actions.SET_OPTIONS,
             payload: {
               screenName: Screens.FUSEBOX,
-              value: "16 to 25 metres"
-            }
+              value: "16 to 25 metres",
+            },
           },
           {
             type: Actions.CHANGE_SCREEN,
             payload: {
-              nextScreen: Screens.POSTCODE
-            }
+              nextScreen: Screens.POSTCODE,
+            },
           },
           {
             type: Actions.SET_PROGRESS,
             payload: {
-              progress: 60
-            }
-          }
+              progress: 60,
+            },
+          },
         ]);
-      }
-    }
+      },
+    },
   ];
 
   return (

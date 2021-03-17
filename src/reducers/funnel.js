@@ -56,6 +56,41 @@ export const CarData = [
   },
 ];
 
+export const ChargerData = [
+  {
+    id: "Wallbox Pulsar Plus",
+    name: "Wallbox Pulsar Plus",
+    subtitle: "Advanced technology made simple",
+    desc:
+      "The Wallbox Pulsar Plus offers the ideal balance between a small size and the powerful performance you need for smart charging at home. Connect Pulsar Plus to the MyWallbox App through Wifi or Bluetooth to control your charging sessions in real time and the charger’s LED light color indicates the charging status. Designed to provide a minimalist yet powerful home charging station, it's one of the smallest tethered chargers on the market and comes with built in earthing protection for an easy installation.",
+    basePrice: 645,
+    olevGrant: 350,
+    increments: [
+      {
+        "upto 10": 0,
+        "upto 11-15": 75,
+        "upto 16-25": 225,
+      },
+    ],
+  },
+  {
+    id: "Wallbox Pulsar Plus2",
+    name: "Wallbox Pulsar Plus2",
+    subtitle: "Advanced technology made simple",
+    desc:
+      "The Wallbox Pulsar Plus offers the ideal balance between a small size and the powerful performance you need for smart charging at home. Connect Pulsar Plus to the MyWallbox App through Wifi or Bluetooth to control your charging sessions in real time and the charger’s LED light color indicates the charging status. Designed to provide a minimalist yet powerful home charging station, it's one of the smallest tethered chargers on the market and comes with built in earthing protection for an easy installation.",
+    basePrice: 945,
+    olevGrant: 350,
+    increments: [
+      {
+        "upto 10": 0,
+        "upto 11-15": 75,
+        "upto 16-25": 225,
+      },
+    ],
+  },
+];
+
 export const initialState = {
   currentScreen: Screens.START,
   selectedOptions: {
