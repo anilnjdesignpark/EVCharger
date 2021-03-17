@@ -1,0 +1,1 @@
+mv "./build/static/css/main*css" "main.css"
