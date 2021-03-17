@@ -1,5 +1,5 @@
 import React from "react";
-import { Actions, Screens, CarData } from "../reducers/funnel";
+import { Actions, Screens, CarData, IMAGES_URl } from "../reducers/funnel";
 import common from "./Common.module.css";
 import style from "./SelectCar.module.css";
 
@@ -97,7 +97,7 @@ function SelectCar({ state, dispatch }) {
           </div>
           <img
             className={style.icon}
-            src={`./images/${getCarIcon()}`}
+            src={`${IMAGES_URl}/${getCarIcon()}`}
             alt="carIcon"
           />
         </div>

@@ -7,6 +7,9 @@ export const Actions = {
   SET_DONE: "SET_DONE",
 };
 
+export const IMAGES_URl =
+  "http://localhost/testsite/wp-content/themes/generatepress_child/evcharger/build/images";
+
 export const Screens = {
   START: "START",
   CAR_SELECT: "CAR_SELECT",

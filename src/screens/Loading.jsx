@@ -1,4 +1,5 @@
 import React from "react";
+import { IMAGES_URl } from "../reducers/funnel";
 import style from "./Loading.module.css";
 
 function Loading({ text = "processing..." }) {
@@ -7,7 +8,7 @@ function Loading({ text = "processing..." }) {
       <div className={style.container}>
         <img
           className={style.icon}
-          src="images/loading.svg"
+          src={`${IMAGES_URl}/loading.svg`}
           alt="loadingIcon"
         />
         <div className={style.text}>{text}</div>

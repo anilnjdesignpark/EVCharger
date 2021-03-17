@@ -64,6 +64,18 @@ function InstantQuote({ state, dispatch, onSuccess }) {
 
     dispatch([
       {
+        type: Actions.SET_OPTIONS,
+        payload: {
+          screenName: Screens.INSTANT_QUOTE,
+          value: {
+            fname,
+            lname,
+            email,
+            mobile,
+          },
+        },
+      },
+      {
         type: Actions.CHANGE_SCREEN,
         payload: {
           nextScreen: Screens.PRODUCTS,

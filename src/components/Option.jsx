@@ -1,4 +1,5 @@
 import React from "react";
+import { IMAGES_URl } from "../reducers/funnel";
 import style from "./Option.module.css";
 
 function Option({ icon, text, onClick }) {
@@ -9,7 +10,7 @@ function Option({ icon, text, onClick }) {
         onClick(text);
       }}
     >
-      <img src={`images/${icon}`} alt="ICON" className={style.icon} />
+      <img src={`${IMAGES_URl}/${icon}`} alt="ICON" className={style.icon} />
       <div className={style.text}>{text}</div>
       <span className={style.select}>select</span>
     </div>

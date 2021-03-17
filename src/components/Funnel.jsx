@@ -149,11 +149,13 @@ function Funnel() {
     <div className={style.container}>
       <ProgressBar value={state.progress + "%"} />
       {buildScreens()}
-      {![Screens.CAR_SELECT, Screens.START].includes(state.currentScreen) && (
+      {![Screens.CAR_SELECT, Screens.START, Screens.PRODUCTS].includes(
+        state.currentScreen
+      ) && (
         <nav className={style.prev} onClick={undo}>
           <button className={style.button}>
             <img
-              src="images/left-chevron.svg"
+              src="http://localhost/testsite/wp-content/themes/generatepress_child/evcharger/build/images/left-chevron.svg"
               alt="backIcon"
               className={style.icon}
             />
