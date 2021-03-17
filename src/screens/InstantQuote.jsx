@@ -23,44 +23,65 @@ function InstantQuote({ state, dispatch, onSuccess }) {
 
     const data = buildMessage();
 
-    fetch("http://localhost/apps/quote/quote.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    // fetch("http://localhost/apps/quote/quote.php", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     setLoading(false);
+    //     setError(false);
+    //     setSuccess(true);
+    //     dispatch([
+    //       {
+    //         type: Actions.CHANGE_SCREEN,
+    //         payload: {
+    //           nextScreen: Screens.PRODUCTS,
+    //         },
+    //       },
+    //       {
+    //         type: Actions.SET_PROGRESS,
+    //         payload: {
+    //           nextScreen: 100,
+    //         },
+    //       },
+    //       {
+    //         type: Actions.SET_DONE,
+    //         payload: {
+    //           done: true,
+    //         },
+    //       },
+    //     ]);
+    //   })
+    //   .catch((e) => {
+    //     setLoading(false);
+    //     setError(true);
+    //     setSuccess(false);
+    //   });
+
+    dispatch([
+      {
+        type: Actions.CHANGE_SCREEN,
+        payload: {
+          nextScreen: Screens.PRODUCTS,
+        },
       },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        setLoading(false);
-        setError(false);
-        setSuccess(true);
-        dispatch([
-          {
-            type: Actions.CHANGE_SCREEN,
-            payload: {
-              nextScreen: Screens.PRODUCTS,
-            },
-          },
-          {
-            type: Actions.SET_PROGRESS,
-            payload: {
-              nextScreen: 100,
-            },
-          },
-          {
-            type: Actions.SET_DONE,
-            payload: {
-              done: true,
-            },
-          },
-        ]);
-      })
-      .catch((e) => {
-        setLoading(false);
-        setError(true);
-        setSuccess(false);
-      });
+      {
+        type: Actions.SET_PROGRESS,
+        payload: {
+          nextScreen: 100,
+        },
+      },
+      {
+        type: Actions.SET_DONE,
+        payload: {
+          done: true,
+        },
+      },
+    ]);
   }
 
   function isEligible() {
