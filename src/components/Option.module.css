@@ -1,0 +1,54 @@
+.option {
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+  border: 0.2em solid gainsboro;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+.option:hover {
+  border: 0.2em solid dodgerblue;
+}
+
+.option .icon {
+  width: 5em;
+}
+.option .text {
+  font-size: large;
+  text-transform: capitalize;
+  text-align: center;
+}
+.option .select {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+@media (min-width: 750px) {
+  .option {
+    flex-direction: column;
+    height: 20em;
+    margin: 0 1em;
+    box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
+  }
+  .option .icon {
+    width: 12em;
+  }
+
+  .option .select {
+    background-color: dodgerblue;
+    text-transform: capitalize;
+    color: white;
+    padding: 0.5em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: larger;
+  }
+  .option:hover .select {
+    opacity: 1;
+  }
+}

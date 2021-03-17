@@ -1,0 +1,9 @@
+.container {
+  background-color: gainsboro;
+  height: 0.6em;
+}
+
+.progress {
+  height: 100%;
+  background-color: dodgerblue;
+}

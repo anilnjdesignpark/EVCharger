@@ -1,0 +1,36 @@
+.container {
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 30vh;
+  min-width: 20em;
+  max-width: 28em;
+  width: 80%;
+  padding: 1em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+  width: 5em;
+  display: block;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.button {
+  display: block;
+  width: 5em;
+  background-color: dodgerblue;
+  padding: 1em 0.5em;
+  margin: 1em auto;
+  border: none;
+  text-transform: capitalize;
+  color: white;
+  cursor: pointer;
+}

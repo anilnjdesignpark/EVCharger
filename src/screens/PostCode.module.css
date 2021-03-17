@@ -1,0 +1,81 @@
+.inputContainer {
+  display: flex;
+  align-items: stretch;
+}
+
+.container {
+}
+
+.select {
+  display: block;
+  font-size: larger;
+  width: 100%;
+  margin-top: 1em;
+  padding: 0.5em;
+  text-transform: capitalize;
+}
+
+.checkButton {
+  background-color: grey;
+  color: white;
+  border: none;
+  padding: 0 1.5em;
+  font-size: large;
+  text-transform: capitalize;
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
+  border: 0.2em solid transparent;
+  transition: all 0.3s;
+  flex: 1;
+}
+
+.checkButton:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+.input {
+  /* margin: 2em auto; */
+  font-size: larger;
+  padding: 1em;
+  display: block;
+  border: 0.2em solid silver;
+  color: grey;
+  width: 80%;
+}
+
+input:focus {
+  border: 0.2em solid dodgerblue;
+}
+
+.button {
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  padding: 1em 1.5em;
+  font-size: large;
+  text-transform: capitalize;
+  display: block;
+  margin: 1em auto;
+  cursor: pointer;
+  border: 0.2em solid transparent;
+  transition: all 0.3s;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+
+.button:hover {
+  background-color: white;
+  color: dodgerblue;
+  border: 0.2em solid dodgerblue;
+}
+
+@media (min-width: 750px) {
+  .container {
+    width: 50vw;
+    margin: 1em auto;
+  }
+}

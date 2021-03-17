@@ -1,0 +1,7 @@
+@media (min-width: 750px) {
+  .options {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+  }
+}

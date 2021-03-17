@@ -1,0 +1,57 @@
+.container {
+  background-color: aliceblue;
+  position: relative;
+}
+
+.prev {
+  background-color: white;
+  position: absolute;
+  bottom: -4.4em;
+  cursor: pointer;
+  padding: 1em;
+  transition: all 0.2s;
+  border: 0.2em solid gainsboro;
+}
+.button {
+  background-color: inherit;
+  border: 0.2em solid transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.icon {
+  width: 2em;
+}
+.text {
+  color: white;
+  text-transform: capitalize;
+  font-size: larger;
+  font-weight: bold;
+  transition: all 0.2s;
+  opacity: 0;
+  width: 0;
+}
+
+@media (min-width: 750px) {
+  .prev {
+    top: 30%;
+    height: 8em;
+    bottom: unset;
+    left: -0.1em;
+    padding: 1em;
+    border: 0.2em solid gainsboro;
+    display: flex;
+    width: 5em;
+  }
+  .prev:hover {
+    width: 8em;
+  }
+  .prev:hover .button .text {
+    opacity: 1;
+    width: 3em;
+    color: grey;
+  }
+  .prev .text {
+    font-size: large;
+  }
+}
