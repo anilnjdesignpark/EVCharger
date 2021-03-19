@@ -6,7 +6,7 @@ import common from "./Common.module.css";
 function Fusebox({ state, dispatch }) {
   const options = [
     {
-      text: "upto 10",
+      text: "upto 10 meters",
       icon: "upto-10m.png",
       handler: function () {
         dispatch([
@@ -14,7 +14,7 @@ function Fusebox({ state, dispatch }) {
             type: Actions.SET_OPTIONS,
             payload: {
               screenName: Screens.FUSEBOX,
-              value: "upto 11",
+              value: "upto 10 meters",
             },
           },
           {
@@ -33,7 +33,7 @@ function Fusebox({ state, dispatch }) {
       },
     },
     {
-      text: "upto 10-11",
+      text: "upto 11-15 meters",
       icon: "11-15m.png",
       handler: function () {
         dispatch([
@@ -41,7 +41,7 @@ function Fusebox({ state, dispatch }) {
             type: Actions.SET_OPTIONS,
             payload: {
               screenName: Screens.FUSEBOX,
-              value: "11 to 15 metres",
+              value: "upto 11-15 meters",
             },
           },
           {
@@ -60,7 +60,7 @@ function Fusebox({ state, dispatch }) {
       },
     },
     {
-      text: "upto 16-25",
+      text: "upto 16-25 meters",
       icon: "16-25m.png",
       handler: function () {
         dispatch([
@@ -68,7 +68,7 @@ function Fusebox({ state, dispatch }) {
             type: Actions.SET_OPTIONS,
             payload: {
               screenName: Screens.FUSEBOX,
-              value: "16 to 25 metres",
+              value: "upto 16-25 meters",
             },
           },
           {

@@ -1,5 +1,4 @@
 import React from "react";
-import Option from "../components/Option";
 import Options from "../components/Options";
 import { Actions, Screens } from "../reducers/funnel";
 import common from "./Common.module.css";
@@ -12,10 +11,10 @@ function HaveVehicle({ state, dispatch }) {
         dispatch({
           type: Actions.CHANGE_SCREEN,
           payload: {
-            nextScreen: Screens.OFFSTREET_PARKING
-          }
+            nextScreen: Screens.OFFSTREET_PARKING,
+          },
         });
-      }
+      },
     },
     {
       text: "no",
@@ -24,11 +23,11 @@ function HaveVehicle({ state, dispatch }) {
         dispatch({
           type: Actions.CHANGE_SCREEN,
           payload: {
-            nextScreen: Screens.OFFSTREET_PARKING
-          }
+            nextScreen: Screens.OFFSTREET_PARKING,
+          },
         });
-      }
-    }
+      },
+    },
   ];
 
   return (

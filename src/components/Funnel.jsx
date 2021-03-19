@@ -138,7 +138,7 @@ function Funnel() {
         );
 
       case Screens.PRODUCTS:
-        return <Products state={state} dispatch={dispatch} />;
+        return <Products state={state} dispatch={dispatch} onRestart={clear} />;
 
       default:
         return <h1>Ops</h1>;

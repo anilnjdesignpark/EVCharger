@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  background-color: white;
+  border-radius: 1em;
+  justify-content: space-around;
+  /* width: 23em; */
+  margin: 1em auto;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-bottom: 0.1em solid gainsboro;
+  box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.1);
+  padding: 0.5em;
+}
+
+.icon {
+  height: 1.5em;
+  /* display: none; */
+}
+.text {
+  text-indent: 0.3em;
+  font-size: small;
+}
+.container > * {
+  padding: 0.5em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 1em;
+}
+.container > *:hover {
+  background-color: whitesmoke;
+}
+
+.restart {
+  border-right: 0.1em solid silver;
+}
+
+.brand {
+}
+
+.fusebox {
+  border-left: 0.1em solid silver;
+}
+
+@media (min-width: 750px) {
+  .container {
+    width: 30em;
+    margin: 0 auto;
+  }
+  .icon {
+    display: initial;
+  }
+  .text {
+    text-indent: 0.2em;
+    font-size: medium;
+  }
+}

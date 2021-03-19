@@ -38,8 +38,11 @@ function SelectCar({ state, dispatch }) {
         screenName: Screens.CAR_SELECT,
         value: {
           brand: e.target.value,
-          model: CarData.filter((car) => car.name === e.target.value)[0]
-            .supported[0],
+          model: CarData.filter(
+            (car) => car.name === e.target.value
+          )[0].supported.concat(
+            CarData.filter((car) => car.name === e.target.value)[0].unSupported
+          )[0],
         },
       },
     });
@@ -113,7 +116,6 @@ function SelectCar({ state, dispatch }) {
         )}
         <button
           className={style.button}
-          disabled={!(activeBrand && activeModel)}
           onClick={(e) => {
             dispatch([
               {
